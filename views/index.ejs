@@ -7,9 +7,12 @@
   <body>
     <h1>Welcome to <%= title %></h1>
     <% messages.map((messages) => { %>
-    <p><%= messages.text %></p>
-    <p><%= messages.user %></p>
-    <p><%= messages.added %></p>
+    <div class="container">
+      <p><%= messages.text %></p>
+      <p>-- <%= messages.user %></p>
+      <p>message sent - <%= messages.date %></p>
+    </div>
     <%})%>
+    <a href="/new">add new message</a>
   </body>
 </html>
